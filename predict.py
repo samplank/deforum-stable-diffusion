@@ -45,6 +45,11 @@ sys.path.append("./src/taming-transformers")
 sys.path.append("./src/clip")
 sys.path.append("./stable-diffusion/")
 sys.path.append("./k-diffusion")
+sys.path.append("..")
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+print('This is dir_path')
+print(dir_path)
 
 from helpers import save_samples, sampler_fn
 from ldm.util import instantiate_from_config
