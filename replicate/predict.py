@@ -126,7 +126,7 @@ class Predictor(BasePredictor):
             choices=[
                 512,
                 896,
-            ]
+            ],
             default=512,
             description="Width of output animation"
         ),
@@ -134,7 +134,7 @@ class Predictor(BasePredictor):
             choices=[
                 512,
                 896,
-            ]
+            ],
             default=512, 
             description="Height of output animation"
         ),
