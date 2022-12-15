@@ -122,6 +122,26 @@ class Predictor(BasePredictor):
         seed: int = Input(
             description="Random seed. Leave blank to randomize the seed", default=None
         ),
+        width: int = Input(
+            choices=[
+                512,
+                896,
+            ]
+            default=512,
+            description="Width of output animation"
+        ),
+        height: int = Input(
+            choices=[
+                512,
+                896,
+            ]
+            default=512, 
+            description="Height of output animation"
+        ),
+        strength_schedule: str = Input(
+            description="amount of presence of previous frame to influence next frame", 
+            default="0: (0.65)"
+        ),
     ) -> Path:
         """Run a single prediction on the model"""
 
@@ -163,6 +183,9 @@ class Predictor(BasePredictor):
         anim_args.translation_x = translation_x
         anim_args.translation_y = translation_y
         anim_args.color_coherence = color_coherence
+        anim_args.W = width
+        anim_args.H = height
+        anim_args.strength_schedule
 
         if anim_args.animation_mode == "None":
             anim_args.max_frames = 1
