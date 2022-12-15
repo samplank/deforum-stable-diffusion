@@ -45,6 +45,10 @@ sys.path.append("src/taming-transformers")
 sys.path.append("src/clip")
 sys.path.append("stable-diffusion/")
 sys.path.append("k-diffusion")
+sys.path.append("./src/taming-transformers")
+sys.path.append("./src/clip")
+sys.path.append("./stable-diffusion/")
+sys.path.append("./k-diffusion")
 
 from helpers import save_samples, sampler_fn
 from ldm.util import instantiate_from_config
