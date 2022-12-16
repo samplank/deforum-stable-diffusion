@@ -8,8 +8,8 @@ from einops import rearrange, repeat
 from PIL import Image
 
 from infer import InferenceHelper
-from midas.dpt_depth import DPTDepthModel
-from midas.transforms import Resize, NormalizeImage, PrepareForNet
+from MiDaS.midas.dpt_depth import DPTDepthModel
+from MiDaS.midas.transforms import Resize, NormalizeImage, PrepareForNet
 
 
 def wget(url, outputdir):

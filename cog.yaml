@@ -25,6 +25,8 @@ build:
     - "resize-right==0.0.2"
     - "torchdiffeq==0.2.3"
     - "opencv-python==4.6.0.66"
+    - "matplotlib==3.6.2"
+    - "timm==0.6.12"
   
   run:
     - mkdir -p /root/.cache/torch/hub/checkpoints/ && wget --output-document "/root/.cache/torch/hub/checkpoints/checkpoint_liberty_with_aug.pth" "https://github.com/DagnyT/hardnet/raw/master/pretrained/train_liberty_with_aug/checkpoint_liberty_with_aug.pth"
